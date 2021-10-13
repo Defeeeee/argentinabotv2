@@ -25,11 +25,12 @@ module.exports = {
                     .setTitle(`Informacion de ${user.username}`)
                     .setURL("https://pogramacion.netlify.app")
                     .setThumbnail(user.displayAvatarURL())
-                    .setColor("AQUA")
+                    .setColor('AQUA')
                     .addFields(
                         { name: `Username:`, value: `${user.username}`},
                         { name: `Tag:`, value: `#${user.discriminator}`},
-                        { name: `ID:`, value: `${user.id}`}
+                        { name: `ID:`, value: `${user.id}`},
+                        { name: `Usuario desde:`, value: `${user.createdAt}`}
                     )
                     .setTimestamp()
                     .setFooter(client.user.tag, client.user.displayAvatarURL());
